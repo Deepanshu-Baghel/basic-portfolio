@@ -515,13 +515,16 @@ services h2{
     margin: 3rem 0;
     color: var(--text-color);
   }
-  .navbar.active{
-    display: none;
+
+  .navbar.active {
+    display: block;
   }
+  
   .gradient-btn{
     display: none;
 
   }
+  
   .home{
     flex-direction: column-reverse;
     margin: 5rem 0;
@@ -532,6 +535,9 @@ services h2{
     align-items: center;
     text-align: center;
 
+  }
+  .my-image{
+    margin-top: 70px;
   }
   .my-image img{
     width: 56vw;

@@ -1,7 +1,12 @@
-let menuIcon = document.querySelector('#menu-icon');
+let menuIcon = document.querySelector('#menu-icons');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
+    menuIcon.classList.toggle('fa-times');
     navbar.classList.toggle('active');
-    menuIcon.classList.toggle('bx-x')
+    
+
 }
+
+
+
