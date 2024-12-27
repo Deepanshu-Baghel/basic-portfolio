@@ -364,6 +364,8 @@ services h2{
   overflow-x: auto; /* Enable horizontal scrolling */
   padding: 2rem 0; /* Add some spacing around the cards */
   scroll-snap-type: x mandatory; /* Smooth snapping behavior */
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .project-card {
