@@ -354,3 +354,7 @@ services h2{
   font-size: 6rem;
 
 }
+
+.projects{
+  background-color: var(--second-bg-color);
+}
