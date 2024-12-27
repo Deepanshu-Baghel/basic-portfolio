@@ -357,18 +357,20 @@ services h2{
 
 }
 
-.projects{
-  background-color: var(--second-bg-color);
-}
-.projects-content{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  place-items: center;
-  gap: 2rem;
-  row-gap: 5rem;
+/* part-5 */
+.projects-content {
+  display: flex; /* Change grid to flexbox for horizontal layout */
+  gap: 2rem; /* Space between cards */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 2rem 0; /* Add some spacing around the cards */
+  scroll-snap-type: x mandatory; /* Smooth snapping behavior */
 }
 
-.project-card{
+.project-card {
+  flex: 0 0 auto; /* Prevent shrinking and allow horizontal stacking */
+  width: 400px; /* Set a consistent width for the cards */
+  height: 500px;
+  scroll-snap-align: start; /* Align each card on scroll */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -376,29 +378,46 @@ services h2{
   text-align: center;
   background-color: var(--bg-color);
   border: 2px solid var(--main-color);
-  border-radius:3rem;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  margin-left: 20px;
-  margin-right: 20px;
-  overflow: hidden;
-  cursor: pointer;
+  border-radius: 3rem;
+  gap: 1.5rem;
+  padding: 2rem;
+  margin: 0 1rem; /* Add some horizontal margin for spacing */
   box-shadow: 0 0 5px var(--main-color);
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.project-card:hover{
+.project-card:hover {
   box-shadow: 0 0 50px var(--main-color);
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
-.project-card img{
-  max-width: 300px;
+
+.project-card img {
+  max-width: 100%;
   border-radius: 2rem;
   object-fit: cover;
 }
+
 .project-card h3{
   font-size: 3rem;
 }
 .project-card p {
   font-size:1.6rem;
+}
+
+.projects {
+  overflow: hidden; /* Ensure the section doesn't extend beyond its container */
+}
+
+.projects-content::-webkit-scrollbar {
+  height: 8px; /* Customize horizontal scrollbar height */
+}
+
+.projects-content::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 4px;
+}
+
+.projects-content::-webkit-scrollbar-track {
+  background: var(--second-bg-color);
 }
