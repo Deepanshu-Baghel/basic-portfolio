@@ -290,6 +290,12 @@ SPAN{
 
 /* part-4 */
 
+.heading{
+  text-align: center;
+  font-size:7rem;
+  margin: 5rem 0;
+}
+
 .services{
   background-color: var(--bg-color);
   color: white;
@@ -310,7 +316,7 @@ services h2{
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
-  height: 400px;
+  height: 450px;
   border-radius: 3rem;
   cursor: pointer;
   border: 5px solid transparent;
@@ -342,4 +348,9 @@ services h2{
 .service-info p{
   font-size: 1.4rem;
   font-weight:600;
+  line-height: 1.7;
+}
+.service-info i{
+  font-size: 6rem;
+
 }
